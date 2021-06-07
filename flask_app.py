@@ -118,13 +118,7 @@ class Cataract(Resource):
         return cataract(img), 200
 
 
-class Bakchodi(Resource):
-    def get(self):
-        return {'message': 'Chal raha hai ye'}, 200
-
-
 api.add_resource(Cataract, '/cataract/<string:query>')
-api.add_resource(Bakchodi, '/testing')
 
 if __name__ == '__main__':
     app.run(port=8800, debug=True, host='192.168.88.160')
